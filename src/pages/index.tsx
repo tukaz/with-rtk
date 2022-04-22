@@ -1,8 +1,8 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-
-import Counter from '../features/counter/Counter'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import Counter from "../features/counter/Counter";
+import styles from "../styles/Home.module.css";
 
 const IndexPage: NextPage = () => {
   return (
@@ -14,6 +14,9 @@ const IndexPage: NextPage = () => {
       <header className={styles.header}>
         <img src="/logo.svg" className={styles.logo} alt="logo" />
         <Counter />
+        <Link href="/animals">
+          <a>Go to animals</a>
+        </Link>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -57,7 +60,7 @@ const IndexPage: NextPage = () => {
         </span>
       </header>
     </div>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
